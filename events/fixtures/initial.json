@@ -1,0 +1,204 @@
+[
+  {
+    "model": "events.city",
+    "pk": 1,
+    "fields": {
+      "name": "San Diego",
+      "state": "California"
+    }
+  },
+  {
+    "model": "events.company",
+    "pk": 1,
+    "fields": {
+      "name": "Taco Town",
+      "description": "A lively taco joint with trivia nights every Thursday.",
+      "city": 1,
+      "website": "https://tacotownsd.com",
+      "logo": ""
+    }
+  },
+  {
+    "model": "events.company",
+    "pk": 2,
+    "fields": {
+      "name": "The Brew Spot",
+      "description": "Craft beer and bingo nights in a cozy environment.",
+      "city": 1,
+      "website": "https://brewspot.com",
+      "logo": ""
+    }
+  },
+  {
+    "model": "events.company",
+    "pk": 3,
+    "fields": {
+      "name": "Sushi & Sound",
+      "description": "Sushi bar with live jazz every weekend.",
+      "city": 1,
+      "website": "https://sushiandsound.com",
+      "logo": ""
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "johndoe",
+      "password": "pbkdf2_sha256$260000$test",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "janedoe",
+      "password": "pbkdf2_sha256$260000$test",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "samsmith",
+      "password": "pbkdf2_sha256$260000$test",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bio": "Loves tacos and tech.",
+      "location": "San Diego",
+      "birth_date": "1990-05-01"
+    }
+  },
+  {
+    "model": "events.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "bio": "A beer enthusiast and foodie.",
+      "location": "San Diego",
+      "birth_date": "1988-09-21"
+    }
+  },
+  {
+    "model": "events.profile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "bio": "Jazz musician and sushi lover.",
+      "location": "San Diego",
+      "birth_date": "1995-02-14"
+    }
+  },
+  {
+    "model": "events.tag",
+    "pk": 1,
+    "fields": { "name": "Trivia" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 2,
+    "fields": { "name": "Bingo" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 3,
+    "fields": { "name": "Live Music" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 4,
+    "fields": { "name": "Sushi" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 5,
+    "fields": { "name": "Craft Beer" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 6,
+    "fields": { "name": "Happy Hour" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 7,
+    "fields": { "name": "Karaoke" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 8,
+    "fields": { "name": "Outdoor" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 9,
+    "fields": { "name": "Pet Friendly" }
+  },
+  {
+    "model": "events.tag",
+    "pk": 10,
+    "fields": { "name": "Jazz" }
+  },
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "title": "Thursday Trivia Night",
+      "description": "Bring your brain and win prizes at Taco Town!",
+      "date": "2025-05-10T19:00:00Z",
+      "city": 1,
+      "image": "",
+      "address": "123 Taco St, San Diego, CA",
+      "hosted_by": 1,
+      "attendees": [1, 2],
+      "tags": [1, 6],
+      "reoccuring": false
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "title": "Craft Beer Bingo Bash",
+      "description": "Test your luck and drink up at The Brew Spot.",
+      "date": "2025-05-12T18:00:00Z",
+      "city": 1,
+      "image": "",
+      "address": "456 Ale Ln, San Diego, CA",
+      "hosted_by": 2,
+      "attendees": [2, 3],
+      "tags": [2, 5],
+      "reoccuring": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+      "title": "Sushi & Jazz Evening",
+      "description": "Savor fresh rolls with smooth live jazz.",
+      "date": "2025-05-15T20:00:00Z",
+      "city": 1,
+      "image": "",
+      "address": "789 Ocean Blvd, San Diego, CA",
+      "hosted_by": 3,
+      "attendees": [1, 3],
+      "tags": [3, 4, 10],
+      "reoccuring": true
+    }
+  }
+]

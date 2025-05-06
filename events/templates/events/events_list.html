@@ -1,0 +1,37 @@
+{% extends "events/base.html" %}
+{% load static %}
+{% block title %}Events{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}?{% now 'U' %}">
+
+<main>
+    <div class="container">
+        <h1>Events</h1>
+        <div class="event-list">
+            {% for event in events %}
+                <div class="event-item">
+                    {% if event.is_active %}active{% else %}inactive{% endif %}">
+                    <h2>{{ event.title }}</h2>
+                    <p>{{ event.description }}</p>
+                    <p>Date: {{ event.date }}</p>
+                    <p>Location: {{ event.location }}</p>
+                    <p>Organizer: {{ event.hosted_by }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- <div class="pagination">
+            {% if events.has_previous %}
+                <a href="?page=1">First</a>
+                <a href="?page={{ events.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span>Page {{ events.number }} of {{ events.paginator.num_pages }}</span>
+
+            {% if events.has_next %}
+                <a href="?page={{ events.next_page_number }}">Next</a>
+                <a href="?page={{ events.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </div> -->
+    </div>
+</main>
+{% endblock %}

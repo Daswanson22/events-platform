@@ -9,7 +9,7 @@ Users will be able to filter for events based on tags, categories, and location.
 - User
 - City
 - Event
-- Category
+- Company
 - Tag
 
 # User Interface #
